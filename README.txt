@@ -1,0 +1,1 @@
+file for setup of distribution file for vsearch5.py
