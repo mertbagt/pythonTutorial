@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from vsearch import search4letters
 
 app = Flask(__name__)
