@@ -17,7 +17,6 @@ def do_search() -> 'html':
 
 @app.route('/')
 @app.route('/entry')
-@app.route('/main')
 def entry_page() -> 'html':
     return render_template('entry.html',
                             the_title='Welcome to search4letters on the web')
