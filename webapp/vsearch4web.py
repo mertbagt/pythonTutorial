@@ -26,10 +26,14 @@ def entry_page() -> 'html':
     return render_template('entry.html',
                             the_title='Welcome to search4letters on the web')
 
-@app.route('/viewing')
+@app.route('/viewlog')
 def view_the_log() -> str:
+    contents=[]
     with open('vsearch.log') as log:
-        contents = log.read()
+        for line in log:
+            contents.append([])
+            for item in line.split('|'):
+                contents[-1].append(escape(item))
     return escape(contents)
 
 if __name__ == '__main__':
